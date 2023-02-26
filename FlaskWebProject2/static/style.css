@@ -1,0 +1,53 @@
+h1 {
+    color: red;
+}
+form {
+    font-family: "Segoe UI", sans-serif;
+    border: 1px solid #555;
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #555;
+}
+input {
+    border: 1px solid #555;
+    font-size: 1.2em;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+input:focus {
+    outline: 5px solid dodgerblue;
+    /* outline: none; */
+}
+textarea {
+    margin-bottom: 10px;
+}
+select {
+    background-color: dodgerblue;
+    font-size: 1.2em;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+button {
+    appearance: none;
+    border: 5px outset dodgerblue;
+    border-radius: 5px;
+    background-color: dodgerblue;
+    color: white;
+    font-size: 1.2em;
+    padding: 5px 10px;
+}
+button:active {
+    border-style: inset;
+    background-color: #1460ab ;
+}
+input[type=checkbox] {
+    appearance: none;
+    border-radius: 0;
+}
+input[type=checkbox]:checked {
+    background-color: red;
+}

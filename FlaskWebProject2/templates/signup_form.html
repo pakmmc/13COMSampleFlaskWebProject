@@ -1,0 +1,62 @@
+{% extends '_layout.html' %}
+
+{% block content %}
+
+{% for arg in request.args %}
+    {{ arg }} : {{ request.args[arg] }} <br>
+{% endfor %}
+
+<form method="POST">
+    <label>First Name:</label>
+    <input name="first_name" required>
+    <br>
+    <label>Last Name:</label>
+    <input name="last_name" value="Last Name" disabled>
+    <br>
+    <label>Email:</label>
+    <input name="email" type="email" placeholder="username@example.com">
+    <br>
+    <label>Password:</label>
+    <input name="password" type="password">
+    <br>
+    <label>Date of birth:</label>
+    <input name="birthday" type="date">
+    <br>
+    <label>Favourite colour:</label>
+    <input name="fav_colour" type="color">
+    <br>
+    <label>How good is this form?</label>
+    <input name="rating" type="range" min="0" max="5">
+    <br>
+
+    <label>What is your favourite fruit?</label>
+    <br>
+    <input id="apple_option" name="fruit" type="radio" value="apple">
+    <label for="apple_option">Apple</label>
+    <br>
+    <input id="banana_option" name="fruit" type="radio" value="banana">
+    <label for="banana_option">Banana</label>
+    <br>
+    <input id="o" name="fruit" type="radio" value="orange">
+    <label for="o">Orange</label>
+    <br>
+
+    <textarea name="message">Hello</textarea>
+    <br>
+
+    <select name="fav_fruit">
+        <option value="" disabled selected hidden>Please select</option>
+        <option>Apple</option>
+        <option>Banana</option>
+        <option>Orange</option>
+    </select>
+    <br>
+
+    <input id="sub" name="subscribe" type="checkbox" checked>
+    <label for="sub">Do you want to subscribe?</label>
+
+    <br>
+    <button>Submit</button>
+</form>
+
+{% endblock %}
