@@ -16,8 +16,12 @@
     <label>Email:</label>
     <input name="email" type="email" placeholder="username@example.com">
     <br>
+
+    <input type="checkbox" class="show-password">
+
     <label>Password:</label>
-    <input name="password" type="password">
+    <input name="password" type="password" class="password">
+    <input name="password" type="text" class="password-text">
     <br>
     <label>Date of birth:</label>
     <input name="birthday" type="date">
@@ -52,11 +56,27 @@
     </select>
     <br>
 
-    <input id="sub" name="subscribe" type="checkbox" checked>
+    <input class="checkbox" id="sub" name="subscribe" type="checkbox" checked>
     <label for="sub">Do you want to subscribe?</label>
 
     <br>
     <button>Submit</button>
 </form>
+
+<script>
+    let passwordField = document.querySelector(".password");
+    let passwordText = document.querySelector(".password-text");
+
+    passwordField.addEventListener("input", updateText);
+    passwordText.addEventListener("input", updatePassword);
+
+    function updateText() {
+        passwordText.value = passwordField.value;
+    }
+
+    function updatePassword() {
+        passwordField.value = passwordText.value;
+    }
+</script>
 
 {% endblock %}

@@ -44,10 +44,25 @@ button:active {
     border-style: inset;
     background-color: #1460ab ;
 }
-input[type=checkbox] {
+
+.checkbox {
     appearance: none;
     border-radius: 0;
 }
-input[type=checkbox]:checked {
-    background-color: red;
+.checkbox:focus {
+    outline: none;
+}
+.checkbox:checked {
+    background-image: url(http://clipart-library.com/images/rTnGxj6yc.jpg);
+    background-size: contain;
+}
+
+.password-text {
+    display: none;
+}
+.show-password:checked ~ .password {
+    display: none;
+}
+.show-password:checked ~ .password-text {
+    display: inline;
 }
